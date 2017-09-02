@@ -1,0 +1,42 @@
+@model relentlessones.Models.Tournament
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tournament</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OpponentName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OpponentName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PlayerID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PointsFor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PointsFor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PointsAgainst)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PointsAgainst)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TournamentID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
